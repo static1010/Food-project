@@ -48,11 +48,15 @@ const cartReducer = (state, action) => {
       updatedItems = [...state.items];
       updatedItems[existingCartItemIndex] = updatedItem;
     }
+    return {
+      items: updatedItems,
+      totalAmount:updatedTotalAmount
+    };
   }
   return defaultCartState;
 };
 
-let a = 56
+let a = 56;
 export default function CartProvider(props) {
   const [cartState, dispatchCartAction] = useReducer(
     cartReducer,
