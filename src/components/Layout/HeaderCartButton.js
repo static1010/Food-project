@@ -28,9 +28,9 @@ export default function HeaderCartButton(props) {
       setBtnIsHighLighted(false);
     }, 300);
 
-    return( )=>{
-      clearTimeout(timer)
-    }
+    return () => {
+      clearTimeout(timer);
+    };
   }, [items]);
 
   return (
